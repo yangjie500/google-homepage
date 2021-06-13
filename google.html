@@ -12,55 +12,87 @@
                 -moz-box-sizing: border-box;
                 box-sizing: border-box;
             }
+
             .bar {
                 background-color: white;
-                height: 48px;
+                height : 48px;
                 position: relative;
+                top: 10px;
+            }
+
+            .nav-bar {
+                background-color:white;
+                width: 350px;
+                height: 100%;
+                position: absolute;
+                right: 0;
+                display: flex;
+                justify-content: center;
+
+            }
+            
+            .child {
+                background-color:white;
+                height: 48px;
+                flex-basis: 20%;
+                display:flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .icon:hover {
+                background-color: #b8b8b8;
+                border-radius: 50%;
+                padding: 5px;
+            }
+
+            .link {
+                text-decoration: none;
+                font-size: 13px;
+                color: black;
+            }
+
+            .link:hover {
+                text-decoration: underline;
+            }
+
+            .login {
+                display: inline-block;
+                background-color: #1A73E8;
+                padding: 11px 26px;
+                overflow: hidden;
+                white-space: nowrap;
+                color: white;
+                text-decoration: none;
+                border-radius: 6%;
                 
             }
-            .nav {
-                position: absolute;
-                top: 7px;
-                height: 48px;
-                width : 20%;
-                right: -5px;
-                display: flex;
-                flex-direction: row;
-                justify-content: space-evenly;
-                align-items: center;
-
-            }
-
-            .nav-ch1 a{
-                flex-basis: 15%;
-                text-decoration: none;
-                color: black;
-                font-size: 13px;
-            }
-            .nav-ch2 a{
-                flex-basis: 15%;
-                text-decoration: none;
-                color: black;
-                font-size: 13px;
-            }
-            .nav-ch3 {
-                flex-basis: 15%;
-                margin-top: 8px;
-                margin-right: -20px;
-            }
-            .nav-ch4 {
-                flex-basis: 30%;
-                background-color: #1A73E8;
-                height: 35px;
-                border-radius: 5%;
-                text-decoration: none;
-                color: white;
             
+            .login:hover {
+                background-color: rgb(50, 131, 238);;
             }
-            .sign {
-                margin-left: 23px;
-                margin-top: 9px;
+            @media only screen and (max-width: 350px) {
+                .nav-bar {
+                    width: 20em;
+                }
             }
+
+            .main {
+                display:flex;
+                flex-direction: column;
+                justify-content: flex-end;
+                height : 290px;
+                background-color: white;
+                align-items: center;
+            }
+            
+            .main-icon {
+                background-color:white;
+                flex-basis: 92px;
+                width: 272px;
+                
+            }
+
                
                 
             
@@ -69,19 +101,14 @@
 
     <body>
         <div class="bar">
-            <div class="nav">
-                <div class="nav-ch1">
-                    <a href="#">Gmail</a>
-                </div>
-                <div class="nav-ch2">
-                    <a href="#">Images</a>
-                </div>
-                <div class="nav-ch3"><a href="#">
-                    <img src="/images/outline_apps_black_24dp.png"></a>
-                </div>
-                <a class="nav-ch4" href="#">
-                    <div class="sign">Sign in</div>
-                </a>
+            <div class="nav-bar">
+                <div class="child"><a class="link" href="#">Gmail</a></div>
+                <div class="child"><a class="link" href="#">Images</a></div>
+                <div class="child"><img class="icon" src="/images/outline_apps_black_24dp.png"></div>
+                <div class="child"><a class="login" href="#">Sign in</a></div>
             </div>
+        </div>
+        <div class="main">
+            <img class="main-icon" src="/images/googlelogo.png">
         </div>
     </body>
