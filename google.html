@@ -12,6 +12,7 @@
                 -moz-box-sizing: border-box;
                 box-sizing: border-box;
             }
+            
 
             .bar {
                 background-color: white;
@@ -93,7 +94,122 @@
                 
             }
 
-               
+            .search {
+                background-color: white;
+                display: flex;
+                height : 160px;
+                padding : 20px;
+                flex-direction: column;
+                align-items: center;
+                justify-content: flex-start;
+
+            }
+            .searchbar {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                width: 582px;
+                flex-basis: 40px;
+                background-color: white;
+                border: rgb(211, 208, 208) solid 1px;
+                border-radius: 30px;
+                padding: 10px;
+
+            }
+
+            .searchbar:hover {
+                box-shadow: 0 0 2px 1px rgba(209, 206, 206, 0.9);
+            }
+
+            .searchform {
+                flex-basis: 450px;
+                background-color: white;
+                position:relative;
+            }
+            .button-1 {
+                top: 80px;
+                left: 70px;
+                position:absolute;
+                height: 40px;
+                width : 150px;
+                background-color: #F8F9FA;
+                border: 1px solid #F8F9FA;
+                font-size : 14px;
+            }
+            .button-1:hover {
+                box-shadow: 0 0 2px 1px rgba(209, 206, 206, 0.9);
+                cursor: pointer;
+            }
+            .button-2 {
+                top: 80px;
+                left: 240px;
+                position:absolute;
+                height: 40px;
+                width : 150px;
+                background-color: #F8F9FA;
+                border: 1px solid #F8F9FA;
+                font-size : 14px;
+            }
+            .button-2:hover {
+                box-shadow: 0 0 2px 1px rgba(209, 206, 206, 0.9);
+                cursor: pointer;
+
+            }
+            .typing {
+                height: 100%;
+                width: 100%;
+                border: none;
+                outline: none;
+                font-size: 1.1em;
+            }
+
+            footer {
+                position: absolute;
+                background-color: #f2f2f2 ;
+                height : 46px;
+                width: 100%;
+                bottom: 0;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;               
+            }
+
+            #footer-1 {
+                flex-basis: 500px;
+                display: flex;
+                align-items: center;
+                margin-left: 15px;
+            }
+
+            #footer-2 {
+                flex-basis: 300px;
+                display:flex;
+                justify-content: flex-end;
+                align-items: center;
+                margin-right: 15px;
+            }
+
+            .foot1child {
+                text-align: center;
+                margin : 5px;
+                display: inline-block;
+                text-decoration: none;
+                color: #70757a;
+                padding: 5px;
+                
+                
+            }
+
+            .foot2child {
+                text-align: center;
+                margin: 5px;
+                display:inline-block;
+                text-decoration: none;
+                color: #70757a;
+                padding: 5px;
+
+            }
+ 
                 
             
         </style>
@@ -111,4 +227,34 @@
         <div class="main">
             <img class="main-icon" src="/images/googlelogo.png">
         </div>
+        <div class="search">
+            <div class="searchbar">
+                <div class="icon-1"><img src="/images/outline_search_black_24dp.png" alt=""></div>
+                <div class="searchform">
+                    <form action="#">
+                        <input type="text" class="typing">
+                        <input class="button-1" type="submit" value="Google Search">
+                        <input class="button-2" type="submit" value="I'm Feeling Lucky">
+                    </form>
+                </div>
+                <div class="icon-2"><img src="/images/google-microphone.png" alt="click to speak"></div>
+            </div>
+        </div>
+
+        <footer>
+            <div id="footer-1">
+                <a class="foot1child" href="#">About</a>
+                <a class="foot1child" href="#">Advertising</a>
+                <a class="foot1child" href="#">Business</a>
+                <a class="foot1child" href="#">How Search works</a>
+            </div>
+            <div id="footer-2">
+                <a class="foot2child" href="#">Privacy</a>
+                <a class="foot2child" href="#">Terms</a>
+                <a class="foot2child" href="#">Settings</a>
+
+            </div>
+        </footer>
+
     </body>
+
